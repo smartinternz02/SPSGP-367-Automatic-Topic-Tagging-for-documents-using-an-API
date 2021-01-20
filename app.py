@@ -34,8 +34,7 @@ def summarizer():
 
 @app.route("/summarize",methods=["POST"])
 def summarize():
-    #output = request.form['output']
-    output = "friend body human work"       #input not available in html
+    output = request.form['output']
     output = re.sub(r'[^a-zA-Z.,]'," ",output)
     print(output)
 
